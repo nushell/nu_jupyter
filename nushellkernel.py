@@ -21,13 +21,16 @@ class NushellKernel(Kernel):
             temp = tempfile.NamedTemporaryFile(suffix=".nu")
             code = code.replace('"', '\\"')
             for line in code.splitlines():
-                temp.write(line + ' | to-html\n')
+                temp.write(str.encode(line + ' | to-html\n'))
                 temp.flush()
             command = 'nu ' + temp.name
 
             p = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
             (output, err) = p.communicate()
             p_status = p.wait()
+
+            output = output.decode()
+            err = err.decode()
 
             if err:
                 display_data = {
