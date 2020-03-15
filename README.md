@@ -6,6 +6,6 @@ To install and run the kernel:
 
 ```
 > cd nu_jupyter
-> jupyter kernelspec install ../nu_jupyter --user
-> jupyter lab
+nu_jupyter> jupyter kernelspec install ../nu_jupyter --user
+nu_jupyter> jupyter lab
 ```
