@@ -15,3 +15,4 @@ nu_jupyter> jupyter lab
 Limitations:
 
 * This currently is limited to single line commands to Nu. We'd like to lift this limitation in the future.
+* State is not kept between runs. This is also something that will change in future versions.
