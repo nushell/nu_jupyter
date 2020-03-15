@@ -1,0 +1,3 @@
+{"argv":["python","-m","nushellkernel", "-f", "{connection_file}"],
+ "display_name":"Nushell"
+}
