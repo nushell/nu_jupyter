@@ -1,5 +1,7 @@
 # Jupyter Notebook support for Nushell
 
+![Example of Jupyter running Nushell](jupyter_example.png)
+
 This is a very(!) experimental kernel for Jupyter for running Nushell. It currently requires 0.11.1 or later.
 
 To install and run the kernel:
