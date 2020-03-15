@@ -14,4 +14,4 @@ nu_jupyter> jupyter lab
 
 Limitations:
 
-* State is not kept between runs. This is also something that will change in future versions.
+* State is not kept between runs. This is something that will change in future versions.
