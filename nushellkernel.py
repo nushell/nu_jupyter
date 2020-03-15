@@ -1,6 +1,7 @@
 from ipykernel.kernelbase import Kernel
 import subprocess
 import json
+import tempfile
 
 class NushellKernel(Kernel):
     implementation = 'Nushell'
@@ -17,12 +18,16 @@ class NushellKernel(Kernel):
     def do_execute(self, code, silent, store_history=True, user_expressions=None,
                    allow_stdin=False):
         if not silent:
-            command = 'nu -c "' + code.replace('"', '\\"') + ' | to-html"'
+            temp = tempfile.NamedTemporaryFile(suffix=".nu")
+            code = code.replace('"', '\\"')
+            for line in code.splitlines():
+                temp.write(line + ' | to-html\n')
+                temp.flush()
+            command = 'nu ' + temp.name
 
             p = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
             (output, err) = p.communicate()
             p_status = p.wait()
-
 
             if err:
                 display_data = {
@@ -41,6 +46,7 @@ class NushellKernel(Kernel):
                 }
                 self.send_response(self.iopub_socket, 'display_data', display_data)
 
+            temp.close()
         return {'status': 'ok',
                 # The base class increments the execution count
                 'execution_count': self.execution_count,
