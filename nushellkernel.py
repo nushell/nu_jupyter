@@ -19,7 +19,6 @@ class NushellKernel(Kernel):
                    allow_stdin=False):
         if not silent:
             temp = tempfile.NamedTemporaryFile(suffix=".nu")
-            code = code.replace('"', '\\"')
             for line in code.splitlines():
                 temp.write(str.encode(line + ' | to-html\n'))
                 temp.flush()
