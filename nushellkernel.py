@@ -20,7 +20,7 @@ class NushellKernel(Kernel):
         if not silent:
             temp = tempfile.NamedTemporaryFile(suffix=".nu")
             for line in code.splitlines():
-                line = line + " | to-html\n"
+                line = line + " | to html\n"
                 temp.write(line.encode('utf-8'))
                 temp.flush()
             command = 'nu ' + temp.name
