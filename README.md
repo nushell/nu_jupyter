@@ -28,6 +28,20 @@ This creates an egg file that pipenv can utilize.
 ### Install using pipenv
 From within your pipenv environment folder, mine is called `me/jup`.
 ```
-jup>pipenv install -e git+https://github.com/nushell/nu_jupyter.git#egg=nushellkernel.egg
+jup> pipenv install -e git+https://github.com/nushell/nu_jupyter.git#egg=dist
 ```
 This should add the nu_jupyter kernelspec and insert entries in your pipfile and pipfile.lock file.
+### Running with pipenv
+From within your pipenv env folder, mine is called `/me/jup`.
+```
+# To activate your pipenv environment, run
+jup> pipenv shell
+
+# To add the new jupyter kernel
+jup> jupyter kernelspec install ../nu_jupyter --user
+
+# To launch jupyter lab, run
+jup> jupyter lab
+```
+After launching you should have jupyter lab looking similar to this.
+![Jupyter Lab](jupyter_lab.png)
