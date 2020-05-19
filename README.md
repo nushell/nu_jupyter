@@ -47,3 +47,4 @@ jup> jupyter lab
 ```
 After launching you should have jupyter lab looking similar to this.
 ![Jupyter Lab](jupyter_lab.png)
+The last thing is to ensure that NuShell is somewhere in your path. Jupyter requires access to it in order to run the commands in the notebook.
