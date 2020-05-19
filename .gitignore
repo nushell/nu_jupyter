@@ -1,0 +1,6 @@
+build/
+nu_jupyter.egg-inf/
+nu_jupyter.egg-info/dependency_links.txt
+nu_jupyter.egg-info/PKG-INFO
+nu_jupyter.egg-info/SOURCES.txt
+nu_jupyter.egg-info/top_level.txt

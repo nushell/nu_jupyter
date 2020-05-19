@@ -15,3 +15,19 @@ nu_jupyter> jupyter lab
 Limitations:
 
 * State is not kept between runs. This is something that will change in future versions.
+
+## pipenv
+
+### Creating the python egg
+To create the egg file do the following:
+```
+> cd nu_jupyter
+nu_jupyter> python.exe setup.py bdist_egg
+```
+This creates an egg file that pipenv can utilize.
+### Install using pipenv
+From within your pipenv environment folder, mine is called `me/jup`.
+```
+jup>pipenv install -e git+https://github.com/nushell/nu_jupyter.git#egg=nushellkernel.egg
+```
+This should add the nu_jupyter kernelspec and insert entries in your pipfile and pipfile.lock file.
