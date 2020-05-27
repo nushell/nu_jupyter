@@ -1,4 +1,11 @@
 #!/bin/bash
 set -ex
+# Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+# Following Brew's instructions
+echo 'eval $(/home/jovyan/.linuxbrew/bin/brew shellenv)' >> /home/jovyan/.profile
+eval $(/home/jovyan/.linuxbrew/bin/brew shellenv)
+# Use Brew to install NuShell
 brew install nushell
+# Install NuShell kernelspec
+jupyter kernelspec install ../nu_jupyter --user
