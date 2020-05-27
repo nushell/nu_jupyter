@@ -14,7 +14,7 @@ set -ex
 # Use Brew to install NuShell
 #brew install nushell
 
-curl https://sh.rustup.rs -sSf | sh
+curl https://sh.rustup.rs -sSf | sh -- -y
 # Rustup
 rustc --version
 # Install NuShell with Cargo
