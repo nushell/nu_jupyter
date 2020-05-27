@@ -5,6 +5,7 @@ set -ex
 # Following Brew's instructions
 echo 'eval $(/home/jovyan/.linuxbrew/bin/brew shellenv)' >> /home/jovyan/.profile
 eval $(/home/jovyan/.linuxbrew/bin/brew shellenv)
+brew tap linuxbrew/xorg
 # Use Brew to install NuShell
 brew install nushell
 # Install NuShell kernelspec
