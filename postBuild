@@ -27,4 +27,4 @@ rustc --version
 cargo install nu
 # Install NuShell kernelspec
 python setup.py bdist_egg
-jupyter kernelspec install . --user
+jupyter kernelspec install --user
