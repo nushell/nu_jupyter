@@ -8,7 +8,7 @@ eval $(/home/jovyan/.linuxbrew/bin/brew shellenv)
 brew tap linuxbrew/xorg
 brew install gcc
 # Let's install rust
-brew install rust
+brew install rustup
 # Rustup
 rustup-init
 rustc --version
