@@ -6,6 +6,12 @@ set -ex
 echo 'eval $(/home/jovyan/.linuxbrew/bin/brew shellenv)' >> /home/jovyan/.profile
 eval $(/home/jovyan/.linuxbrew/bin/brew shellenv)
 brew tap linuxbrew/xorg
+brew install gcc
+# Let's install rust
+brew install rust
+# Rustup
+rustup-init
+rustc --version
 # Use Brew to install NuShell
 brew install nushell
 # Install NuShell kernelspec
