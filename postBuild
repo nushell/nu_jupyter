@@ -2,12 +2,12 @@
 set -ex
 
 # Install Homebrew
-#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 # Following Brew's instructions
-#echo 'eval $(/home/jovyan/.linuxbrew/bin/brew shellenv)' >> /home/jovyan/.profile
-#eval $(/home/jovyan/.linuxbrew/bin/brew shellenv)
-#brew tap linuxbrew/xorg
-#brew install gcc
+echo 'eval $(/home/jovyan/.linuxbrew/bin/brew shellenv)' >> /home/jovyan/.profile
+eval $(/home/jovyan/.linuxbrew/bin/brew shellenv)
+brew tap linuxbrew/xorg
+brew install gcc
 # Let's install rust
 #brew install rustup
 #rustup-init
