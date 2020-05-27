@@ -18,6 +18,7 @@ set -ex
 curl https://sh.rustup.rs -sSf > ~/rustup-init.sh
 chmod +x ~/rustup-init.sh
 ~/rustup-init.sh -y
+source $HOME/.cargo/env
 # Rustup
 rustc --version
 # Install NuShell with Cargo
