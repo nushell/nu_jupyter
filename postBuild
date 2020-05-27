@@ -25,6 +25,9 @@ rustc --version
 #cargo install nu --features=stable
 #cargo install nu --features=average,fetch,inc,match,post,ps,start,str,sys,textview,tree
 cargo install nu
+# Pull tree
+git clone https://github.com/fdncred/nu_jupyter.git
+cd nu_jupyter
 # Install NuShell kernelspec
-python setup.py bdist_egg
-jupyter kernelspec install --user
+#python setup.py bdist_egg
+jupyter kernelspec install ../nu_jupyter --user
