@@ -22,6 +22,8 @@ source $HOME/.cargo/env
 # Rustup
 rustc --version
 # Install NuShell with Cargo
-cargo install nu --features=stable
+#cargo install nu --features=stable
+#cargo install nu --features=average,fetch,inc,match,post,ps,start,str,sys,textview,tree
+cargo install nu
 # Install NuShell kernelspec
 jupyter kernelspec install ../nu_jupyter --user
